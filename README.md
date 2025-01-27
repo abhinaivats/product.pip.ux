@@ -7,7 +7,7 @@ Product Application in that:
 - We can create, retrieve, update, delete Product.
 - There is a Search bar for finding Product by title.
 
-![angular-16-crud-example](angular-16-crud-example.png)
+![productApp-example](productApp.png)
 
 Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
 

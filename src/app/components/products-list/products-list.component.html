@@ -18,22 +18,28 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-8">
     <h4>Product List</h4>
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let product of products; let i = index"
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Poduct Name</th>
+          <th scope="col">Unit</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let product of products; let i = index"
         [class.active]="i == currentIndex"
-        (click)="setActiveProdcuts(product, i)"
-      >
-        {{ product.name }}
-      </li>
-    </ul>
-
-    <button class="m-3 btn btn-sm btn-danger" (click)="retrieveProducts()">
-      Remove All
-    </button>
+        (click)="setActiveProdcuts(product, i)">
+          <th scope="row">{{i}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.unit}}</td>
+          <td>{{product.price}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="col-md-6">
     <app-product-details

@@ -2,14 +2,14 @@
   <div class="submit-form">
     <div *ngIf="!submitted">
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Name</label>
         <input
           type="text"
           class="form-control"
-          id="title"
+          id="name"
           required
           [(ngModel)]="prodcut.name"
-          name="title"
+          name="name"
         />
       </div>
 
@@ -19,9 +19,19 @@
           class="form-control"
           id="description"
           required
-          [(ngModel)]="prodcut.name"
+          [(ngModel)]="prodcut.description"
           name="description"
         />
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="prodcut.description"
+            name="description"
+          />
+          
       </div>
 
       <button (click)="saveProduct()" class="btn btn-success">Submit</button>
